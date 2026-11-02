@@ -1,0 +1,596 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.02 [en] (Win95; I) [Netscape]">
+   <META NAME="Author" CONTENT="John Edward Philips, Ph.D.">
+<META NAME="Author" CONTENT="John Edward Philips, Ph.D.">
+<TITLE>US Federal Constitution Quiz, part 2</TITLE>
+<meta name="keywords" content="U.S. Constitution, interactive quiz, civics
+political science">
+<meta name="description" content="An interactive, online quiz about the United States federal Constitution">
+</HEAD>
+<BODY TEXT="#000080" BGCOLOR="#FFFFFF" VLINK="#008080" ALINK="#FFFF00" stylesrc="../main.htm">
+
+<CENTER><FONT FACE="Comic Sans MS"><FONT SIZE=+2><FONT COLOR="#3333FF">Dr.
+Philips's</FONT> </FONT></FONT><BLINK><FONT FACE="CaslonOpnface BT"><FONT COLOR="#CC0000"><FONT SIZE=+3>U.S.
+Federal Constitution<PARAM NAME=text VALUE="Composer Plug-ins"></APPLET></FONT></FONT></FONT></BLINK><FONT FACE="Comic Sans MS"><FONT SIZE=+4>
+</FONT></FONT><FONT COLOR="#3366FF"><FONT FACE="DearTeacher-Normal"><FONT SIZE=+3>Quiz</FONT></FONT><FONT FACE="Arial,Helvetica"><FONT SIZE=+2>Part II</FONT></FONT></FONT></CENTER>
+
+<CENTER><FONT FACE="Arial,Helvetica"><FONT COLOR="#FF6666"><FONT SIZE=+2>&nbsp;</FONT></FONT></FONT></CENTER>
+
+<P>&nbsp;
+
+
+<P>
+<HR WIDTH="100%"><SCRIPT language="JavaScript">
+
+
+
+//Set timeout so that window.status text is erased when mouse moves off link.
+
+
+
+
+
+
+
+function display(txt){
+
+
+
+window.status=txt
+
+
+
+}
+
+
+
+
+
+
+
+function display2(){
+
+
+
+window.status=""
+
+
+
+}
+
+
+
+
+
+
+
+//Initialize arrays.
+
+
+
+ 
+
+
+
+function initarray(){
+
+
+
+
+
+
+
+this.length=initarray.arguments.length
+
+
+
+  for (var i=0;i<this.length;i++){
+
+
+
+  this[i+1]=initarray.arguments[i];
+
+
+
+  }
+
+
+
+}
+
+
+
+
+
+
+
+//find options selected
+
+
+
+function getselectedIndex(){
+
+
+
+
+
+
+
+return document.forma.q1.selectedIndex
+
+
+
+return document.forma.q2.selectedIndex
+
+
+
+return document.forma.q3.selectedIndex
+
+
+
+return document.forma.q4.selectedIndex
+
+
+
+return document.forma.q5.selectedIndex
+
+
+
+return document.forma.q6.selectedIndex
+
+
+
+return document.forma.q7.selectedIndex
+
+
+
+return document.forma.q8.selectedIndex
+
+
+
+return document.forma.q9.selectedIndex
+
+
+
+return document.forma.q10.selectedIndex
+
+
+}
+
+
+
+
+
+
+
+//Validate test answers. 
+
+
+
+
+
+
+
+function scoretest(forma){
+
+
+
+answers=new initarray(1,3,4,1,1,0,3,1,2,3)
+
+
+
+a=0
+
+
+
+counter=0
+
+
+
+getselectedIndex()
+
+
+
+userinput=new initarray(document.forma.q1.selectedIndex,document.forma.q2.selectedIndex,
+
+
+
+document.forma.q3.selectedIndex,document.forma.q4.selectedIndex,document.forma.q5.selectedIndex,
+
+
+
+document.forma.q6.selectedIndex,document.forma.q7.selectedIndex,document.forma.q8.selectedIndex,
+
+
+
+document.forma.q9.selectedIndex,document.forma.q10.selectedIndex)
+
+
+
+
+
+
+
+for (var i=1;i<11;i++){
+
+
+
+   if (userinput[i]==answers[i])
+
+
+
+     counter=counter+1 
+
+
+
+   else
+
+
+
+       a=1
+
+
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+Winopen(a,counter)
+
+
+
+}
+
+
+
+
+
+
+
+//Determine text for message box
+
+
+
+
+
+
+
+function Winopen(a,counter) {
+
+
+
+
+
+
+
+   msg=window.open("","msg","toolbar=no,directories=no,menubar=no,width=300,height=120") 
+
+
+
+   msg.document.write("<head><title>Score</title></head>")
+
+
+
+   msg.document.write("<body bgcolor='#ffffff' text='#000080'>")
+
+
+
+
+
+
+
+  if(a==0){
+
+
+
+   msg.document.write("<center><h3>Well Done! - 10/10</h3></center>") 
+
+
+
+  }
+
+
+
+  else{ 
+
+
+
+    if(counter<4){
+
+
+
+     msg.document.write("<center><h3>"+counter+"/10 - I hope you're not a U.S. citizen!</h3></center>")
+
+
+
+     }
+
+
+
+    if(counter>3&& counter<8){
+
+
+
+     msg.document.write("<center><h3>"+counter+"/10 - Keep trying!</h3></center>")
+
+
+
+     }
+
+
+
+    if(counter>7){
+
+
+
+     msg.document.write("<center><h3>"+counter+"/10 - Nearly there - keep trying!</h3></center>")
+
+
+
+     }
+
+
+
+  }  
+
+
+
+
+
+
+
+  msg.document.write("<form>")
+
+
+
+
+
+
+
+  if(a==0){
+
+
+
+     msg.document.write("<center><input type=button value='OK' onClick='self.close()'></center>")
+
+
+
+   }
+
+
+
+   else{ 
+
+
+
+     msg.document.write("<center><input type=button value='Back to Quiz...' onClick='self.close()'></center>")   
+
+
+
+   }
+
+
+
+msg.document.write("</form>")
+
+
+
+msg.document.write("</body>")
+
+
+
+}
+
+
+
+
+
+
+
+function giveup(){
+
+
+
+
+
+
+
+answers=window.open("","answers","toolbar=no,directories=no,menubar=no,width=360,height=420") 
+
+
+
+   answers.document.write("<head><title>Answers</title></head>")
+
+
+
+   answers.document.write("<body bgcolor='#ffffee' text='#004080'>")
+
+
+
+   answers.document.write("<center><h1>Answers</h1></center>")
+
+
+
+   answers.document.write("1. the states or the people.<br>")
+
+
+
+   answers.document.write("2. persons.<br>")
+
+
+
+   answers.document.write("3. carry out (execute) the laws.<br>")
+
+
+
+   answers.document.write("4. incorporate companies.<br>")
+
+
+
+   answers.document.write("5. The president<br>")
+
+
+
+   answers.document.write("6. Women in states that allowed them to vote<br>")
+
+
+
+   answers.document.write("7. Pay it. You can't question the national debt<br>")
+
+
+
+   answers.document.write("8. A republican form of government<br>")
+
+
+
+   answers.document.write("9. It doesn't say anything about political parties.<br>")
+
+
+
+   answers.document.write("10. not defined.<br>")
+
+
+
+   answers.document.write("<form>")
+
+
+
+   answers.document.write("<center><input type=button value='OK' onClick='self.close()'></center>")
+
+
+
+   answers.document.write("</form>")
+
+
+
+   answers.document.write("</body>")  
+
+
+
+}
+
+
+
+<!-- -->
+
+
+
+</SCRIPT>
+
+<CENTER>&nbsp;</CENTER>
+
+
+<P>&nbsp;
+<BR><FORM name="forma"><B>1. According to the Tenth Amendment to the Constitution,
+powers not directly given to the federal government are granted to:</B>&nbsp;
+<DIV ALIGN=right><SELECT name="q1" size="1"><OPTION selected>the states
+only.&nbsp;</OPTION><OPTION>the states or the people.&nbsp;</OPTION><OPTION>the
+people only.&nbsp;</OPTION><OPTION>no one. Anything not in the Constitution
+is unlawful.&nbsp;</OPTION><OPTION>no one. Only federal powers are mentioned.</OPTION></SELECT></DIV>
+
+
+<P>&nbsp;
+
+<P>&nbsp; <B>2. In the Constitution as originally written, slaves are referred
+to as:</B>&nbsp;
+<DIV ALIGN=right><SELECT name="q2" size="1"><OPTION selected>negroes.&nbsp;</OPTION><OPTION>
+colored people.&nbsp;</OPTION><OPTION>African-Americans.&nbsp;</OPTION><OPTION>
+persons.&nbsp;</OPTION><OPTION>slaves.</OPTION></SELECT></DIV>
+
+
+<P>&nbsp;
+
+<P>&nbsp; <B>3. Article 1, section 8 of the U. S. Constitution enumerates
+the powers of Congress. The Constitution does <I>NOT</I> give Congress
+the power to:</B>&nbsp;
+<BR>&nbsp;
+<DIV ALIGN=right><SELECT name="q3" size="1"><OPTION selected>collect taxes
+and spend the money on welfare.&nbsp;</OPTION><OPTION>declare war.&nbsp;</OPTION><OPTION>impeach
+the president and remove him from office.&nbsp;</OPTION><OPTION>grant copyrights
+and patents.&nbsp;</OPTION><OPTION>carry out (execute) the laws.</OPTION></SELECT></DIV>
+&nbsp;
+
+<P>&nbsp; <B>4. Article 1 section 8 does <I>NOT </I>give Congress the power
+to:</B>&nbsp;
+<DIV ALIGN=right><SELECT name="q4" size="1"><OPTION selected>declare war.&nbsp;</OPTION><OPTION>incorporate
+companies.&nbsp;</OPTION><OPTION>establish the post office.&nbsp;</OPTION><OPTION>punish
+piracy.&nbsp;</OPTION><OPTION>borrow money and spend it.</OPTION></SELECT></DIV>
+&nbsp;
+
+<P>&nbsp; <B>5. Under the U. S. Constitution who is responsible for carrying
+out (executing) federal laws?</B>&nbsp;
+<DIV ALIGN=right><SELECT name="q5" size="1"><OPTION selected>The Supreme
+Court&nbsp;</OPTION><OPTION>The president&nbsp;</OPTION><OPTION>The Congress&nbsp;</OPTION><OPTION>The
+FBI&nbsp;</OPTION><OPTION>The military</OPTION></SELECT></DIV>
+&nbsp;
+
+<P>&nbsp; <B>6. Before the 19th Amendment guaranteed women the right to
+vote, what women could vote?</B>&nbsp;
+<DIV ALIGN=right><SELECT name="q6" size="1"><OPTION selected>Women in states
+that allowed them to vote&nbsp;</OPTION><OPTION>No women&nbsp;</OPTION><OPTION>Women
+whose husbands permitted them to vote&nbsp;</OPTION><OPTION>White women
+only&nbsp;</OPTION><OPTION>Native-born white women only</OPTION></SELECT></DIV>
+&nbsp;
+
+<P>&nbsp; <B>7. According to the U. S. Constitution, what action can the
+federal government take about the national debt?&nbsp;</B>
+<DIV ALIGN=right><SELECT name="q7" size="1"><OPTION selected><B>Ignore
+it if they don't want to pay it&nbsp;</OPTION><OPTION>Declare bankruptcy
+so they don't have to pay it&nbsp;</OPTION><OPTION>Make the states pay
+for it&nbsp;</OPTION><OPTION>Pay it. You can't question the national debt&nbsp;</OPTION><OPTION></B>Reschedule
+it as long as they promise to pay later</OPTION></SELECT></DIV>
+&nbsp;
+
+<P>&nbsp; <B>8. According to the U. S. Constitution, what kind of government
+does the federal government guarantee to each state?</B>&nbsp;
+<DIV ALIGN=right><SELECT name="q8" size="1"><OPTION selected>A bicameral
+legislature and a governor&nbsp;</OPTION><OPTION>A republican form of government&nbsp;</OPTION><OPTION>A
+Republican Party administration&nbsp;</OPTION><OPTION>Revenue-sharing funds&nbsp;</OPTION><OPTION>The
+federal government can't interfere with states' rights</OPTION></SELECT></DIV>
+&nbsp;
+
+<P>&nbsp; <B>9. What does the U. S. Constitution say about political parties?</B>&nbsp;
+<DIV ALIGN=right><SELECT name="q9" size="1"><OPTION selected>It limits
+them to two major parties.&nbsp;</OPTION><OPTION>People can organize any
+party that is not Communist.&nbsp;</OPTION><OPTION>It doesn't say anything
+about political parties.&nbsp;</OPTION><OPTION>Parties must support the
+Constitution.&nbsp;</OPTION><OPTION>People can organize any political parties
+they want to.</OPTION></SELECT></DIV>
+&nbsp;
+
+<P>&nbsp; <B>10. In the U. S. Constitution, the official American economic
+system is:</B>&nbsp;
+<DIV ALIGN=right><SELECT name="q10" size="1"><OPTION selected>free enterprise.&nbsp;</OPTION><OPTION>capitalism.&nbsp;</OPTION><OPTION>entrepreneurship.&nbsp;</OPTION><OPTION>not
+defined.&nbsp;</OPTION><OPTION>mercantilism.</OPTION></SELECT></DIV>
+&nbsp;
+
+<P>&nbsp;
+<CENTER><INPUT type="button" value="Check Answers" 
+onclick="scoretest(forma)"><INPUT type="reset" value="Reset"><INPUT type="button" 
+value="Give up?" onclick="giveup()"></CENTER>
+</FORM>
+
+<BR>&nbsp;
+<BR>&nbsp;
+<CENTER><FONT COLOR="#000000"><FONT SIZE=+1>Please click on the button
+below to get explanations for the answers <BR>&nbsp;
+(or if your browser can't do Java).</FONT></FONT></CENTER>
+<BR>&nbsp;
+<BR>&nbsp;
+
+<CENTER><A HREF="answers.htm" target="main"> <IMG SRC="graphics/answers.PNG" BORDER=0 HEIGHT=33 WIDTH=80> </A></CENTER>
+<BR>&nbsp;
+<BR>&nbsp;
+
+</BODY>
+</HTML>

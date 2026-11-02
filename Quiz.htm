@@ -1,0 +1,656 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.02 [en] (Win95; I) [Netscape] with a little help from notepad.exe">
+   <META NAME="Author" CONTENT="John Edward Philips, Ph.D.">
+<META NAME="Author" CONTENT="John Edward Philips, Ph.D.">
+<TITLE>Quiz</TITLE>
+<meta name="keywords" content="U.S. Constitution, interactive quiz, civics, political science">
+<meta name="description" content="An interactive, online quiz about the United States federal Constitution">
+</HEAD>
+<BODY TEXT="#000080" BGCOLOR="#FFFFFF" VLINK="#008080" ALINK="#FFFF00" stylesrc="../main.htm">
+
+<CENTER><FONT SIZE=+2><FONT COLOR="#3333FF">Dr.
+Philips's</FONT></FONT><BLINK><FONT FACE="CaslonOpnface BT"><FONT COLOR="#CC0000"><FONT SIZE=+3>U.S.
+Federal Constitution</FONT></FONT></FONT></BLINK><FONT FACE="Comic Sans MS"><FONT SIZE=+4>
+</FONT></FONT><FONT COLOR="#3366FF"><FONT SIZE=+2>Quiz</FONT></FONT></CENTER>
+<!-->
+
+<P>I hope this quiz will encourage people to read and study the world's
+oldest written constitution that is still in force.
+
+<P>I got this idea from another site that had a quiz about the U.S. Constitution.
+Many answers were taken out of context or gave a particular interpretation
+of a controversial section. Sometimes one answer even contradicted another.
+The author appeared to be trying to push a particular political line.
+
+<P>This saddened me.&nbsp; The Constitution does not belong to one party
+or persuasion more than another. It protects all of us and safeguards our
+rights.
+
+<P>When I was young a teacher told my school class to watch a television
+interview of a famous Supreme Court Justice. The reporter asked him about
+some controversial rulings he had made. He pulled a worn copy of the Constitution
+out of his suit coat pocket, opened it, and read a section from it. When
+the reporter tried to press him further, he glared at the young man and
+said firmly "That's what it says, and that's what it means."
+
+<P>I was just a kid, but I could understand what it meant. The U.S. Constitution
+is not only brief and readable, it is simple enough to be understood by
+a typical, educated person who has never been to law school. It is so well
+written that it is a pleasure to read.
+
+<P>More recently I learned how few Americans have actually read their own
+Constitution. I felt ashamed. Our Constitution tells us how to run our
+government. We sign loyalty oaths to it. It is important not only for Americans
+but for the whole world. The British Parliament is rightly called the "Mother
+of Parliaments," and the <A HREF="http://www.law.cornell.edu/constitution/constitution.overview.html">American
+Constitution</A> might well be called the "Mother of Constitutions."
+
+<P>This quiz is not supposed to be a very difficult quiz with a lot of
+detailed, specialized questions. It is not intended for a Constitutional
+Law course, or a Political Science seminar.&nbsp; It is just a&nbsp; test
+of&nbsp; knowledge of the Constitution, which you should be able to pass
+just by reading the <A HREF="http://www.law.cornell.edu/constitution/constitution.overview.html">document</A>
+carefully. I have tried to include not only sections of the Constitution
+that one political persuasion likes to quote, but a selection of those
+that are favorites of patriotic Americans of various political persuasions.
+
+<P>But before you read the Constitution, find out how much you already
+know about it:
+
+<P>
+<HR WIDTH="100%"><SCRIPT language="JavaScript">
+
+
+//Set timeout so that window.status text is erased when mouse moves off link.
+
+
+function display(txt){
+
+
+window.status=txt
+
+
+}
+
+
+
+function display2(){
+
+window.status=""
+
+}
+
+
+
+//Initialize arrays.
+
+
+
+
+
+function initarray(){
+
+
+
+
+this.length=initarray.arguments.length
+
+
+
+  for (var i=0;i<this.length;i++){
+
+
+
+  this[i+1]=initarray.arguments[i];
+
+
+
+  }
+
+
+
+}
+
+
+
+
+
+
+
+//find options selected
+
+
+
+function getselectedIndex(){
+
+
+
+
+return document.forma.q1.selectedIndex
+
+
+
+return document.forma.q2.selectedIndex
+
+
+
+return document.forma.q3.selectedIndex
+
+
+
+return document.forma.q4.selectedIndex
+
+
+
+return document.forma.q5.selectedIndex
+
+
+
+return document.forma.q6.selectedIndex
+
+
+
+return document.forma.q7.selectedIndex
+
+
+
+return document.forma.q8.selectedIndex
+
+
+
+return document.forma.q9.selectedIndex
+
+
+
+return document.forma.q10.selectedIndex
+
+
+
+}
+
+
+
+
+
+
+
+//Validate test answers. 
+
+
+
+
+
+
+
+function scoretest(forma){
+
+
+
+answers=new initarray(1,3,1,4,2,0,4,1,1,0)
+
+
+
+a=0
+
+
+
+counter=0
+
+
+
+getselectedIndex()
+
+
+
+userinput=new initarray(document.forma.q1.selectedIndex,document.forma.q2.selectedIndex,
+
+
+
+document.forma.q3.selectedIndex,document.forma.q4.selectedIndex,document.forma.q5.selectedIndex,
+
+
+
+document.forma.q6.selectedIndex,document.forma.q7.selectedIndex,document.forma.q8.selectedIndex,
+
+
+
+document.forma.q9.selectedIndex,document.forma.q10.selectedIndex)
+
+
+
+
+
+
+
+for (var i=1;i<11;i++){
+
+
+
+   if (userinput[i]==answers[i])
+
+
+
+     counter=counter+1 
+
+
+
+   else
+
+
+
+       a=1
+
+
+
+ }
+
+
+
+
+
+Winopen(a,counter)
+
+
+
+}
+
+
+
+
+//Determine text for message box
+
+
+
+
+function Winopen(a,counter) {
+
+
+
+
+   msg=window.open("","msg","toolbar=no,directories=no,menubar=no,width=300,height=120") 
+
+
+
+   msg.document.write("<head><title>Score</title></head>")
+
+
+
+   msg.document.write("<body bgcolor='#ffffff' text='#000080'>")
+
+
+
+
+
+  if(a==0){
+
+
+
+   msg.document.write("<center><h3>Well Done! - 10/10</h3></center>") 
+
+
+
+  }
+
+
+
+  else{ 
+
+
+
+    if(counter<4){
+
+
+
+     msg.document.write("<center><h3>"+counter+"/10 - I hope you're not a U.S. citizen!</h3></center>")
+
+
+
+     }
+
+
+
+    if(counter>3&& counter<8){
+
+
+
+     msg.document.write("<center><h3>"+counter+"/10 - Keep trying!</h3></center>")
+
+
+
+     }
+
+
+
+    if(counter>7){
+
+
+
+     msg.document.write("<center><h3>"+counter+"/10 - Nearly there - keep trying!</h3></center>")
+
+
+
+     }
+
+
+
+  }  
+
+
+
+
+
+
+
+  msg.document.write("<form>")
+
+
+
+
+
+
+
+  if(a==0){
+
+
+
+     msg.document.write("<center><input type=button value='OK' onClick='self.close()'></center>")
+
+
+
+   }
+
+
+
+   else{ 
+
+
+
+     msg.document.write("<center><input type=button value='Back to Quiz...' onClick='self.close()'></center>")   
+
+
+
+   }
+
+
+
+msg.document.write("</form>")
+
+
+
+msg.document.write("</body>")
+
+
+
+}
+
+
+
+
+
+
+
+function giveup(){
+
+
+
+
+
+
+
+answers=window.open("","answers","toolbar=no,directories=no,menubar=no,width=360,height=480") 
+
+
+
+   answers.document.write("<head><title>Answers</title></head>")
+
+
+
+   answers.document.write("<body bgcolor='#ffffee' text='#004080'>")
+
+
+
+   answers.document.write("<center><h1>Answers</h1></center>")
+
+
+
+   answers.document.write("1. only restricted the federal government.<br>")
+
+
+
+   answers.document.write("2. three-fourths of the states.<br>")
+
+
+
+   answers.document.write("3. other rights not mentioned.<br>")
+
+
+
+   answers.document.write("4. guarantee themselves peace, freedom, justice and a better society.<br>")
+
+
+
+   answers.document.write("5. six years at a time.<br>")
+
+
+
+   answers.document.write("6. two years at a time.<br>")
+
+
+
+   answers.document.write("7. all of the above.<br>")
+
+
+
+   answers.document.write("8. four years at a time up to two times.<br>")
+
+
+
+   answers.document.write("9. a majority of the Electoral College voting in December.<br>")
+
+
+
+   answers.document.write("10. made by the president and approved by the Senate.<br>")
+
+
+
+   answers.document.write("<form>")
+
+
+
+   answers.document.write("<center><input type=button value='OK' onClick='self.close()'></center>")
+
+
+
+   answers.document.write("</form>")
+
+
+
+   answers.document.write("</body>")  
+
+
+
+}
+
+
+
+<!-- -->
+
+
+
+</SCRIPT>
+
+<CENTER>&nbsp;</CENTER>
+
+
+<P>&nbsp;
+<BR><FORM name="forma">
+<TD><B>
+<P>&nbsp; <B>1. When originally passed, the First Amendment to the Constitution:&nbsp;</B>
+<DIV ALIGN=right><SELECT name="q1" size="1"><OPTION selected>restricted states' 
+rights.&nbsp;</OPTION><OPTION>only restricted the federal government.&nbsp;</OPTION><OPTION>gave
+Americans new rights.&nbsp;</OPTION><OPTION>passed over George Washington's
+veto.&nbsp;</OPTION><OPTION>outlawed school prayer.</OPTION></SELECT></DIV>
+&nbsp;
+
+<BR>&nbsp;
+<P>&nbsp;
+
+<TR>
+<TD><B>2. Amendments to the U. S. Constitution are passed by conventions called by 
+two-thirds of the states and by Congress, or by two-thirds of each house of Congress and:</B>&nbsp;</TD>
+</TR>
+
+<DIV ALIGN=right>
+<TD><SELECT name="q2" size="1"><OPTION selected>signed by the president.&nbsp;</OPTION><OPTION>
+approved by the Supreme Court.&nbsp;</OPTION><OPTION>national referendums.&nbsp;</OPTION><OPTION>
+three-fourths of the states.&nbsp;</OPTION><OPTION>the military.</OPTION></SELECT></TD></DIV>
+</TR>
+<BR>&nbsp;
+
+<P>&nbsp;
+<TR>
+<TD><B>3. The Bill of Rights (first ten amendments to the Constitution) guarantees 
+not only the rights specifically mentioned in it but also:</B>&nbsp;</TD>
+</TR>
+<BR>&nbsp;
+<DIV ALIGN=right><TD><SELECT name="q3" size="1"><OPTION selected>nothing.&nbsp;</OPTION><OPTION>other 
+rights not mentioned.&nbsp;</OPTION><OPTION>tells people not to abuse them.&nbsp;</OPTION><OPTION>denies them to communists or 
+anarchists.&nbsp;</OPTION><OPTION>that the government can never take your property
+away.</OPTION></SELECT></TD></DIV>
+</TR>
+
+<P>&nbsp;
+<P>&nbsp;
+<TR>
+<TD><B>4. The U. S. Constitution says that the U. S. government is set up by the people to:</B>&nbsp;</TD>
+</TR>
+
+<DIV ALIGN=right><TD><SELECT name="q4" size="1"><OPTION selected>promote the 
+Christian religion.&nbsp;</OPTION><OPTION>use English as its official language.&nbsp;</OPTION><OPTION>attack 
+other countries.&nbsp;</OPTION><OPTION>be based on God's will and divine law.&nbsp;</OPTION><OPTION>guarantee themselves peace, freedom,
+justice and a better society.</OPTION></SELECT></TD></DIV>
+</TR>
+
+
+<P>&nbsp;
+<P>&nbsp;
+<TR>
+<TD><B>5. United States Senators are elected for:</B>&nbsp;</TD>
+</TR>
+
+<DIV ALIGN=right><TD><SELECT name="q5" size="1"><OPTION selected>two years at a 
+time.&nbsp;</OPTION><OPTION>four years at a time.&nbsp;</OPTION><OPTION>six years 
+at a time.&nbsp;</OPTION><OPTION>as long as they live.&nbsp;</OPTION><OPTION>as 
+long as their state governors let them serve.</OPTION></SELECT></TD></DIV>
+</TR>
+
+<P>&nbsp;
+<P>&nbsp;
+<TR>
+<TD><B>6. Members of the House of Representatives are elected for:</B>&nbsp;</TD>
+</TR>
+
+<DIV ALIGN=right><TD><SELECT name="q6" size="1"><OPTION selected>two years at a 
+time.&nbsp;</OPTION><OPTION>four years at a time.&nbsp;</OPTION><OPTION>six years 
+at a time.&nbsp;</OPTION><OPTION>as long as they live.&nbsp;</OPTION><OPTION>as 
+long as their state governors let them serve.</OPTION></SELECT></TD></DIV>
+</TR>
+
+<P>&nbsp;
+<P>&nbsp;
+<TR>
+<TD><B>7. To become a federal law a bill must be:&nbsp;</B></TD>
+</TR>
+
+<DIV ALIGN=right><TD><SELECT name="q7" size="1"><OPTION selected><B>passed 
+by the Senate.&nbsp;</OPTION><OPTION>passed by the House of Representatives.&nbsp;</OPTION><OPTION>signed 
+by the president.&nbsp;</OPTION><OPTION>or passed by two-thirds of each house of 
+Congress if the president vetoes it.&nbsp;</OPTION><OPTION></B>all of the above.</OPTION></SELECT></TD></DIV>
+</TR>
+
+<P>&nbsp;
+<P>&nbsp;
+<TR>
+<TD><B>8. The president of the United States is elected to serve for:</B>&nbsp;</TD>
+</TR>
+
+<DIV ALIGN=right><TD><SELECT name="q8" size="1"><OPTION selected>two years at a time 
+up to four times.&nbsp;</OPTION><OPTION>four years at a time up to two times.&nbsp;</OPTION><OPTION>six 
+years at a time up to two times.&nbsp;</OPTION><OPTION>four years at a time as many times as 
+re-elected.&nbsp;</OPTION><OPTION>as long as Congress approves of his policies.</OPTION></SELECT></TD></DIV>
+</TR>
+
+
+<P>&nbsp;
+<P>&nbsp;
+<TR>
+<TD><B>9. The president is ordinarily elected by:</B>&nbsp;</TD>
+</TR>
+
+<DIV ALIGN=right><TD><SELECT name="q9" size="1"><OPTION selected>a majority 
+of the people who vote in an election in November.&nbsp;</OPTION><OPTION>a 
+majority of the Electoral College voting in December.&nbsp;</OPTION><OPTION>a 
+majority of the next Congress as soon as they meet.&nbsp;</OPTION><OPTION>a 
+majority of the House of Representatives every four years.&nbsp;</OPTION><OPTION>a 
+majority of the state legislatures.</OPTION></SELECT></TD></DIV>
+</TR>
+
+
+<P>&nbsp;<P>&nbsp;
+<TR>
+<TD><B>10. Treaties with foreign countries and international bodies like the
+United Nations are:</B>&nbsp;</TD>
+</TR>
+
+<DIV ALIGN=right><TD><SELECT name="q10" size="1"><OPTION selected>made 
+by the president and approved by the Senate.&nbsp;</OPTION><OPTION>made 
+by the Senate and approved by the president.&nbsp;</OPTION><OPTION>made 
+by the president and approved by the House.&nbsp;</OPTION><OPTION>made 
+by the Congress and approved by the state governors.&nbsp;</OPTION><OPTION>made 
+by the President alone.</OPTION></SELECT></TD></DIV>
+</TR>
+
+
+<P>&nbsp;
+<P>&nbsp;
+
+
+<CENTER><INPUT type="button" value="Check Answers" 
+onclick="scoretest(forma)"><INPUT type="reset" value="Reset"><INPUT type="button" 
+value="Give up?" onclick="giveup()"></CENTER></FORM>
+
+<BR>&nbsp;
+<BR>&nbsp;
+<CENTER><FONT COLOR="#000000"><FONT SIZE=+1>Please click on the button
+below to get explanations for the answers <BR>&nbsp;
+(or if your browser can't do Java).</FONT></FONT></CENTER>
+<BR>&nbsp;
+<BR>&nbsp;
+
+<CENTER><A HREF="answers2.htm" target="main"> <IMG SRC="graphics/answers.PNG" BORDER=0 HEIGHT=33 WIDTH=80> </A></CENTER>
+<BR>&nbsp;
+<BR>&nbsp;
+
+<BR>&nbsp;
+<BR>&nbsp;
+<CENTER><FONT COLOR="#000000"><FONT SIZE=+1>Please click <A HREF="quiztwo.htm">here</A>
+to go to part II.</FONT></FONT></CENTER>
+
+
+
+<P>&nbsp;
+<HR WIDTH="100%">
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<CENTER><FONT COLOR="#FF0000"><FONT SIZE=+2>&nbsp;Special thanks to all
+the political scientists and lawyers who commented on this quiz.&nbsp;</FONT></FONT><FONT COLOR="#000000"></FONT></CENTER>
+
+<CENTER><FONT COLOR="#000000">&nbsp;</FONT></CENTER>
+
+<CENTER><FONT COLOR="#000000">&nbsp;</FONT></CENTER>
+
+</BODY>
+</HTML>
